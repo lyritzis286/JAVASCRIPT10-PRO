@@ -1,0 +1,19 @@
+//Explicit Conversions
+console.log("Boolean(1)" + Boolean(1));
+console.log("Boolean(0) " + Boolean(0));
+console.log("Boolean('') " + Boolean(''));
+console.log("Boolean('Hello') " + Boolean('Hello'));
+
+// Loop Conditions - Iterations
+while(1) {
+    break;
+}
+
+do {
+    console.log("This will run once");
+} while(0);
+
+for(let i = 1; 1; i++) {
+    console.log("In for loop");
+    break;
+}
