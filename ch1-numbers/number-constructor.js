@@ -24,7 +24,21 @@ if (Number.isInteger(num)) {
     console.log("Not an integer")
 }
 
+//Implicit Convercion ---- Coercion 
 
+let aNum = 4 / "aueb";  //NaN
+
+
+//Υπαρχει και global isNan("hello") true -- backward compatibility
+//Number.isNaN("Hello") false 
+if (Number.isNaN(aNum)) {
+    console.log("aNum is Nan?: " + aNum)
+}else {
+    console.log(aNum)
+}
+
+// Format decimals
+console.log((12.12345).toFixed(2));         //toFixed(2) επιστρεφει string
 
 
 
