@@ -15,3 +15,5 @@ let a = 10;
 let b = 20;
 
 [a, b] = [b, a];        //destructure;
+console.log('a=' + a)
+console.log('b=' + b)
