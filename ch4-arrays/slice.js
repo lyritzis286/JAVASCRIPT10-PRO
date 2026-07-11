@@ -11,3 +11,4 @@ console.log(copyCities2);
 
 const orders = [ {total: 10}, {total: 20} ]
 const deepOrdersCopy = structuredClone(orders)
+console.log(deepOrdersCopy)
