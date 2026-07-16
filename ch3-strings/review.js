@@ -87,3 +87,18 @@ function wordCounter(text, word) {
 
 }
 
+//Ασκηση 6
+//Μια συναρτηση η οποια παιρνει ως εισοδο
+// ενα string που ειναι ο αριθμος πιστωτικης καρτας
+//π.χ 1234 5678 2345 6543 και επιστρεφει masked ************ 6543 χωρις κενα 
+
+function maskCardNumber(cardNumber) {
+    if(!cardNumber.trim()) return 
+
+    const digits = cardNumber.trim().split(' ').join('')
+    const lastFourDigits = digits.slice(-4)
+    const masked = '*'.repeat(digits.length -4)
+    const maskedNumber = masked + lastFourDigits;
+    return maskedNumber;
+}
+
