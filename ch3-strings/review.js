@@ -31,7 +31,7 @@ function  isPalindrome(str) {
     return normal === reverseStr;
 }
 
-str1 = 'savvas savvas'
+const str1 = 'savvas savvas'
 
 console.log(isPalindrome(str1))
 
