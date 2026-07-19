@@ -7,7 +7,7 @@ function findMax(arr){
     if (!Array.isArray(arr) || arr.lenght === 0) {
         return
     }
-     let max = arr[0]
+     let max = -Infinity;
     for (let i = 0; i < arr.length; i++){ 
        
         if(arr[i] > max) {
@@ -79,4 +79,52 @@ console.log(isEqual([1, 2, 3, 4], [1, 2, 3]));
 
 function removeValue(arr, value) {
     return arr.filter(item => item !==value)
+}
+
+//Ασκηση 5 
+// Μια συναρτηση που βρισκει το 2ο μεγαλυτερο
+// αριθμο ενος πινακα [7,7,4]
+
+function secondBigger(arr) {
+    
+    if(!Array.isArray(arr) || arr.length < 2) {
+        return
+    }
+
+    let firstMax = -Infinity;
+    let secMx = -Infinity;
+    
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > firstMax) {
+            secondMax = firstMax
+            firstMax = arr[i]
+        }else if(arr[i] > secondMax && arr[i] !== firstMax) {
+            secondMax = arr[i]
+        }
+    }
+    return secondMax;
+}
+
+function secondMax2(arr) {
+    const uniqueNumbers = [...new Set(arr)]
+    uniqueNumbers.sort((a, b) => b - a)
+    return uniqueNumbers[1]
+}
+
+const arr1 = [12, 4, 7, 7, 9, 1];
+
+console.log(secondMax2(arr1));
+
+//Ασκηση 6 
+// Μια συναρτηση που να παινρει ως εισοδο εναν πινακα 
+// και ενα θετικο offset και να κανει αριστερο και κυκλικο 
+// shift κατα offset θεσεις. [1, 2, 3] -> [2, 3, 1]
+
+function shiftLeft(arr, offset) {
+    let shiftedArray = []
+    const normalizedOffset = offset % arr.length
+    
+    for(let i = 0; i < arr.length; i++) {
+        shiftedArr[(i - normalizedOffset + arr.length) % arr.length] = arr[i] 
+    }
 }
