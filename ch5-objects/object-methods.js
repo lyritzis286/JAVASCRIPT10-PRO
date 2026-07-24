@@ -9,6 +9,8 @@ const user = {
     }
 }
 
+
+user
 console.log(user.getFirstname())
 
 console.log(user.getFullname())
