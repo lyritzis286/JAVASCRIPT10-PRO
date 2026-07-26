@@ -131,3 +131,20 @@ processUser('online-user', (user) => {
     console.log(`Data received for user ${user}`)
 })
 
+
+// Closures
+
+function createCounter() {
+    let count = 0               //private
+
+    return function() {
+        count++
+        return count 
+    }
+}
+
+const myCounter = createCounter()
+
+console.log(myCounter())
+console.log(myCounter())
+console.log(myCounter())
