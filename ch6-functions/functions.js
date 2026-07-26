@@ -105,3 +105,16 @@ const cube = (n) => {
 //Implicit return of object
 
 const createUser = (username, role) => ({username: username, role: role})
+
+
+//Hoisting
+console.log(hello('Alice'))
+
+// Hoisting ανεβαινει ψηλα η συναρτηση οποτε το καλεσμα λειτουργει 
+function hello(name) {
+    return `Hello ${name}`
+}
+
+
+ console.log(hello2('bob'))   //δεν κανει hoisting 
+const hello2 = (name) => `Hello ${name}`
