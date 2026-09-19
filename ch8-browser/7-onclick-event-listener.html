@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Event listener</title>
+  </head>
+  <body>
+    <button
+      id="btn"
+      type="button"
+    >
+      say hello
+    </button>
+
+    <script>
+      const btn = document.getElementById("btn");
+
+      btn.addEventListener("click", function () {
+        console.log("Hello Coding");
+      });
+    </script>
+  </body>
+</html>
