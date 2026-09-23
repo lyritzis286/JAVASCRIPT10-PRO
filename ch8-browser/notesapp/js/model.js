@@ -5,7 +5,7 @@ export function getNotes() {
   return notes;
 }
 
-export function insertNot(noteTxt) {
+export function insertNote(noteTxt) {
   notes = [...notes, { key: id, note: noteTxt, softDeleted: false }];
   id++;
 }

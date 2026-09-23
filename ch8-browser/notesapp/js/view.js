@@ -32,8 +32,7 @@ export function renderGRDate() {
 
   const dateStr = `${daysGR[now.getDay()]}, ${now.getDate()}, ${monthsGR[now.getMonth()]},${now.getFullYear()}`;
 
-  const timeStr = `${pad(now.getHours())}
-  :${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+  const timeStr = `${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
 
   dateDOM.innerHTML = `${dateStr}<br>${timeStr}`;
 }
